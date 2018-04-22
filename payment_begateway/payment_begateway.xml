@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="plugin" group="j2store" method="upgrade">
+	<name>BeGateway Payment Plugin</name>
+	<version>1.0</version>
+	<creationDate>Apr 2018</creationDate>
+	<author>begateway.com</author>
+	<authorEmail></authorEmail>
+	<authorUrl>https://begateway.com</authorUrl>
+	<copyright>2018 eComCharge</copyright>
+	<license>GNU General Public License v2 or later</license>
+	<description>Accept payments via BeGateway platform</description>
+	<scriptfile>script.payment_begateway.php</scriptfile>
+	<files>
+		<filename plugin="payment_begateway">payment_begateway.php</filename>
+		<filename>index.html</filename>
+		<folder>payment_begateway</folder>
+	</files>
+  <languages>
+    <language tag="en-GB">payment_begateway/languages/en-GB/en-GB.plg_j2store_payment_begateway.ini</language>
+    <language tag="ru-RU">payment_begateway/languages/ru-RU/ru-RU.plg_j2store_payment_begateway.ini</language>
+  </languages>
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="display_name" type="text" size="30" default="" label="j2store_plugin_display_name" description="j2store_plugin_display_name_desc"/>
+			<field name="display_image" type="media" label="j2store_plugin_display_image" description="j2store_plugin_display_image_desc"/>
+      <field name="shop_id" required="true" type="text" size="30" default="361" label="J2STORE_BEGATEWAY_SHOP_ID" description="J2STORE_BEGATEWAY_SHOP_ID_DESC"/>
+			<field name="shop_key" required="true" type="text" size="30" default="b8647b68898b084b836474ed8d61ffe117c9a01168d867f24953b776ddcb134d" label="J2STORE_BEGATEWAY_SHOP_KEY" description="J2STORE_BEGATEWAY_SHOP_KEY_DESC"/>
+			<field name="domain_checkout" required="true" type="text" size="30" default="checkout.begateway.com" label="J2STORE_BEGATEWAY_DOMAIN_CHECKOUT" description="J2STORE_BEGATEWAY_DOMAIN_CHECKOUT_DESC"/>
+			<field type="spacer" />
+      <field name="enable_bankcard" type="checkbox" label="J2STORE_BEGATEWAY_ENABLE_BANKCARDS" description="J2STORE_BEGATEWAY_ENABLE_BANKCARDS_DESC" value="1" default="1" />
+      <field name="enable_bankcard_halva" type="checkbox" label="J2STORE_BEGATEWAY_ENABLE_BANKCARDS_HALVA" description="J2STORE_BEGATEWAY_ENABLE_BANKCARDS_HALVA_DESC" value="1" default="0" />
+      <field name="enable_erip" type="checkbox" label="J2STORE_BEGATEWAY_ENABLE_ERIP" description="J2STORE_BEGATEWAY_ENABLE_ERIP_DESC" value="1" default="0" />
+			<field type="spacer" />
+			<field name="transaction_type" type="radio" default="1" label="J2STORE_BEGATEWAY_TRANSACTION_TYPE" description="J2STORE_BEGATEWAY_TRANSACTION_TYPE_DESC">
+				<option value="0">J2STORE_BEGATEWAY_TRANSACTION_TYPE_AUTH</option>
+				<option value="1">J2STORE_BEGATEWAY_TRANSACTION_TYPE_PAYMENT</option>
+			</field>
+			<field type="spacer" />
+			<field name="test_mode" type="radio" default="1" label="J2STORE_BEGATEWAY_MODE" description="J2STORE_BEGATEWAY_MODE_DESC">
+				<option value="0">J2STORE_BEGATEWAY_MODE_LIVE</option>
+				<option value="1">J2STORE_BEGATEWAY_MODE_TEST</option>
+			</field>
+      <field type="spacer" />
+      <field name="order_expiry_days" type="list" default="1" required="true" label="J2STORE_BEGATEWAY_DAYS" description="J2STORE_BEGATEWAY_DAYS_DESC">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+      </field>
+      <field type="spacer" />
+      <field name="onselection" type="textarea" cols="10" rows="5" default="" label="j2store_on_selection_label" description="j2store_on_selection_desc"/>
+      <field name="onbeforepayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_before_payment_label" description="j2store_on_before_payment_desc"/>
+      <field name="onafterpayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_after_payment_label" description="j2store_on_after_payment_desc"/>
+      <field name="onerrorpayment" type="textarea" cols="10" rows="5" default="" label="j2store_on_error_payment_label" description="j2store_on_error_payment_desc"/>
+      <field type="spacer" />
+      <field name="button_text" type="text" size="50" default="J2STORE_PLACE_ORDER" label="j2store_button_text_label" description="j2store_button_text_desc" />
+		</fieldset>
+	</fields>
+</config>
+</extension>
