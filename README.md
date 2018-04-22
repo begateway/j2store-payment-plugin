@@ -1,4 +1,4 @@
-[Русская версия](#Модуль-оплаты-begateway-для-joomla-2.5-3.x-и-j2store)
+[Русская версия](#Модуль-оплаты-begateway-для-joomla-253x-и-j2store)
 
 # BeGateway payment module for Joomla 2.5/3.x and J2Store
 
@@ -54,7 +54,7 @@ Use the following test card to make failed test payment:
   * Card expiry date: 01/30
   * CVC: 123
 
-[English version](#begateway-payment-module-for-joomla-2.x-3-and-j2store)
+[English version](#begateway-payment-module-for-joomla-253x-and-j2store)
 
 # Модуль оплаты BeGateway для Joomla 2.5/3.x и J2Store
 
