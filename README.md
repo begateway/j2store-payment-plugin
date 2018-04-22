@@ -11,7 +11,7 @@
 
 ## The module installation
 
-1. Download [payment_begateway.zip](https://github.com/begateway/j2store-payment-module/blob/master/payment_begateway.zip?raw=true)
+1. Download [payment_begateway.zip](https://github.com/begateway/j2store-payment-plugin/raw/master/payment_begateway.zip)
 2. Go to Joomla's administration panel
 3. Go to _Manage_ page via the menu _Extensions_
 4. Install the module package
@@ -67,7 +67,7 @@ Use the following test card to make failed test payment:
 
 ## Установка
 
-1. Скачайте [payment_begateway.zip](https://github.com/begateway/j2store-payment-module/blob/master/payment_begateway.zip?raw=true)
+1. Скачайте [payment_begateway.zip](https://github.com/begateway/j2store-payment-plugin/raw/master/payment_begateway.zip)
 2. Зайдите в панель администратора Joomla
 3. Через меню _Расширения_ перейдите в _Менеджер расширений_
 4. Установите пакет
