@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.0" type="plugin" group="j2store" method="upgrade">
 	<name>BeGateway Payment Plugin</name>
-	<version>1.0</version>
+	<version>1.1</version>
 	<creationDate>Apr 2018</creationDate>
 	<author>begateway.com</author>
 	<authorEmail></authorEmail>
@@ -32,6 +32,9 @@
       <field name="enable_bankcard_halva" type="checkbox" label="J2STORE_BEGATEWAY_ENABLE_BANKCARDS_HALVA" description="J2STORE_BEGATEWAY_ENABLE_BANKCARDS_HALVA_DESC" value="1" default="0" />
       <field name="enable_erip" type="checkbox" label="J2STORE_BEGATEWAY_ENABLE_ERIP" description="J2STORE_BEGATEWAY_ENABLE_ERIP_DESC" value="1" default="0" />
 			<field type="spacer" />
+		  <field name="payment_status" type="paymentstatus" default="1"
+				 addfieldpath="plugins/j2store/payment_begateway/payment_begateway/fields"
+				 label="j2store_default_payment_status" description="j2store_default_payment_status_desc"/>
 			<field name="transaction_type" type="radio" default="1" label="J2STORE_BEGATEWAY_TRANSACTION_TYPE" description="J2STORE_BEGATEWAY_TRANSACTION_TYPE_DESC">
 				<option value="0">J2STORE_BEGATEWAY_TRANSACTION_TYPE_AUTH</option>
 				<option value="1">J2STORE_BEGATEWAY_TRANSACTION_TYPE_PAYMENT</option>

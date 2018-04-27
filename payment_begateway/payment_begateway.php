@@ -204,8 +204,13 @@ class plgJ2StorePayment_begateway extends J2StorePaymentPlugin
         if ($money->getCents() == $webhook->getResponse()->transaction->amount &&
             $money->getCurrency() == $webhook->getResponse()->transaction->currency) {
 
+    			$order_state_id = $this->params->get ( 'payment_status', 1 ); // DEFAULT: CONFIRMED
+
           if ($webhook->isSuccess()) {
               $order->payment_complete ();
+              if ($order_state_id != 1) {
+                $order->update_status($order_state_id);
+              }
               $order->empty_cart();
           } elseif ($webhook->isIncomplete() || $webhook->isPending()) {
               $order->update_status ( 4 );
