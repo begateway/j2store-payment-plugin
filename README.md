@@ -94,7 +94,6 @@ Use the following test card to make failed test payment:
 
   * __Идентификационный номер магазина:__ 361
   * __Секретный ключ магазина:__ b8647b68898b084b836474ed8d61ffe117c9a01168d867f24953b776ddcb134d
-  * __Домен платежного шлюза:__ demo-gateway.begateway.com
   * __Домен платежной страницы:__ checkout.begateway.com
   * __Режим работы:__ Тестовый
 
