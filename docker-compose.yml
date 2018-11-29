@@ -11,8 +11,8 @@ services:
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_PASSWORD: example
-    volumes:
-      - ./payment_begateway:/var/www/html/plugins/j2store/payment_begateway
+    #volumes:
+      #- ./payment_begateway:/var/www/html/plugins/j2store/payment_begateway
 
   joomladb:
     image: mysql:5.6

@@ -129,7 +129,7 @@ class plgJ2StorePayment_begateway extends J2StorePaymentPlugin
 
     if ($this->params->get('enable_erip') == 1) {
       $erip = new \BeGateway\PaymentMethod\Erip(array(
-        'order_id' => $data['order_id'],
+        'order_id' => $order->j2store_order_id,
         'account_number' => strval($data['order_id'])
       ));
       $transaction->addPaymentMethod($erip);
